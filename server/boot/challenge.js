@@ -300,11 +300,12 @@ module.exports = function(app) {
 
         // save user does nothing if user does not exist
         return Observable.just({
-
-          title: challenge.name,
-          name: challenge.name,
-          details: challenge.description,
-          description: challenge.description,
+          title: challenge.nameEs != '' ? challenge.nameEs : challenge.name,
+          name: challenge.nameEs != '' ? challenge.nameEs : challenge.name,
+          details: challenge.descriptionEs.length > 0 ?
+		challenge.descriptionEs : challenge.description,
+          description: challenge.descriptionEs.length > 0 ?
+		challenge.descriptionEs : challenge.description,
           challengeId: challenge.id,
           challengeType: challenge.challengeType,
           dashedName: origChallengeName,
