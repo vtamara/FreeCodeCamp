@@ -9,7 +9,9 @@ var _ = require('lodash'),
     boot = require('loopback-boot'),
     expressState = require('express-state'),
     path = require('path'),
-    passportProviders = require('./passport-providers');
+    passportProviders = require('./passport-providers'),
+    https = require('https'),
+    sslConfig = require('./ssl-config')
 
 var setProfileFromGithub = require('./utils/auth').setProfileFromGithub;
 var getSocialProvider = require('./utils/auth').getSocialProvider;
@@ -95,8 +97,14 @@ Object.keys(passportProviders).map(function(strategy) {
 });
 
 app.start = _.once(function() {
-  app.listen(app.get('port'), function() {
-    app.emit('started');
+  var options = {
+    key: sslConfig.privateKey,
+    cert: sslConfig.certificate
+  };
+  var server = https.createServer(options, app);
+  server.listen(app.get('port'), function() {
+    var baseUrl = 'https://' + app.get('host') + ':' + app.get('port');
+    app.emit('started', baseUrl);
     console.log(
       'FreeCodeCamp server listening on port %d in %s',
       app.get('port'),
@@ -106,6 +114,7 @@ app.start = _.once(function() {
       console.log('Free Code Camp is in beta mode');
     }
   });
+  return server
 });
 
 module.exports = app;

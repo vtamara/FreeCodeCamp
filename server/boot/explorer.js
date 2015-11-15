@@ -1,4 +1,5 @@
 module.exports = function mountLoopBackExplorer(app) {
+	return
   if (process.env.NODE_ENV === 'production') {
     return;
   }
