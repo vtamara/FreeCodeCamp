@@ -128,7 +128,7 @@ block content
                                             li.faded.map-p.negative-10
                                                 a(href="/challenges/#{challenge.dashedName}")
                                                     span.capitalize= challenge.type + ': '
-                                                    span= challenge.title
+                                                    span= challenge.nameEs != '' ? challenge.nameEs : challenge.title
                                                         span.sr-only= " Complete"
 
 
@@ -140,7 +140,7 @@ block content
                                             li.map-p.negative-10
                                                 a(href="/challenges/#{challenge.dashedName}")
                                                     span.capitalize= challenge.type + ': '
-                                                    span= challenge.title
+                                                    span= challenge.nameEs != '' ? challenge.nameEs : challenge.title
                                                         span.sr-only= " Incomplete"
                                                 if challenge.markNew
                                                     span.text-danger.small &thinsp; &thinsp;
