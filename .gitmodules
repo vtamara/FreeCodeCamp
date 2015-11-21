@@ -1,0 +1,3 @@
+[submodule "fcc_trad"]
+	path = fcc_trad
+	url = https://github.com/vtamara/fcc_trad
