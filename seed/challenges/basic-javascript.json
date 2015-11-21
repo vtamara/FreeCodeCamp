@@ -699,7 +699,6 @@
         "<code>&nbsp;&nbsp;\"tails\": 1,</code>",
         "<code>&nbsp;&nbsp;\"enemies\": [\"Water\", \"Dogs\"]</code>",
         "<code>};</code>",
-        "</code>",
         "Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.",
         "Let's try to make an object that represents a dog called <code>myDog</code> which contains the properties <code>\"name\"</code> (a string), <code>\"legs\"</code>, <code>\"tails\"</code> and <code>\"friends\"</code>.",
         "You can set these object properties to whatever values you want, as long <code>\"name\"</code> is a string, <code>\"legs\"</code> and <code>\"tails\"</code> are numbers, and <code>\"friends\"</code> is an array."
