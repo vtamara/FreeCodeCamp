@@ -31,7 +31,7 @@
         "<code>// Este es un comentario.</code>",
         "El comentario de barra-estrella-estrella-barra, comentará todo lo que haya entre los caracteres <code>/*</code> y <code>*/</code>:",
         "<code>/* Este es también un comentario */</code>",
-        "Trate de crear uno de cada uno."
+        "Trata de crear uno de cada uno."
       ]
     },
     {
@@ -43,7 +43,7 @@
         "Let's modify our <code>welcomeToBooleans</code> function so that it will return <code>true</code> instead of <code>false</code> when the run button is clicked."
       ],
       "tests": [
-        "assert(typeof(welcomeToBooleans()) === 'boolean', 'message: The <code>welcomeToBooleans()</code> function should return a boolean &#40;true/false&#41; value.');",
+        "assert(typeof welcomeToBooleans() === 'boolean', 'message: The <code>welcomeToBooleans()</code> function should return a boolean &#40;true/false&#41; value.');",
         "assert(welcomeToBooleans() === true, 'message: <code>welcomeToBooleans()</code> should return true.');"
       ],
       "challengeSeed": [
@@ -79,7 +79,7 @@
         "Look at the <code>ourName</code> example if you get stuck."
       ],
       "tests": [
-        "assert((function(){if(typeof(myName) !== \"undefined\" && typeof(myName) === \"string\" && myName.length > 0){return true;}else{return false;}})(), 'message: <code>myName</code> should be a string that contains at least one character in it.');"
+        "assert((function(){if(typeof myName !== \"undefined\" && typeof myName === \"string\" && myName.length > 0){return true;}else{return false;}})(), 'message: <code>myName</code> should be a string that contains at least one character in it.');"
       ],
       "challengeSeed": [
         "var ourName = \"Free Code Camp\";",
@@ -87,7 +87,7 @@
         ""
       ],
       "tail": [
-        "if(typeof(myName) !== \"undefined\"){(function(v){return v;})(myName);}"
+        "if(typeof myName !== \"undefined\"){(function(v){return v;})(myName);}"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -108,8 +108,8 @@
         "Now let's create two new string variables: <code>myFirstName</code> and <code>myLastName</code> and assign them the values of your first and last name, respectively."
       ],
       "tests": [
-        "assert((function(){if(typeof(myFirstName) !== \"undefined\" && typeof(myFirstName) === \"string\" && myFirstName.length > 0){return true;}else{return false;}})(), 'message: <code>myFirstName</code> should be a string with at least one character in it.');",
-        "assert((function(){if(typeof(myLastName) !== \"undefined\" && typeof(myLastName) === \"string\" && myLastName.length > 0){return true;}else{return false;}})(), 'message: <code>myLastName</code> should be a string with at least one character in it.');"
+        "assert((function(){if(typeof myFirstName !== \"undefined\" && typeof myFirstName === \"string\" && myFirstName.length > 0){return true;}else{return false;}})(), 'message: <code>myFirstName</code> should be a string with at least one character in it.');",
+        "assert((function(){if(typeof myLastName !== \"undefined\" && typeof myLastName === \"string\" && myLastName.length > 0){return true;}else{return false;}})(), 'message: <code>myLastName</code> should be a string with at least one character in it.');"
       ],
       "challengeSeed": [
         "var firstName = \"Alan\";",
@@ -118,13 +118,13 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(myFirstName) !== \"undefined\" && typeof(myLastName) !== \"undefined\"){(function(){return myFirstName + ', ' + myLastName;})();}"
+        "if(typeof myFirstName !== \"undefined\" && typeof myLastName !== \"undefined\"){(function(){return myFirstName + ', ' + myLastName;})();}"
       ],
       "type": "waypoint",
       "challengeType": 1,
       "nameEs": "Declara variables tipo cadena",
       "descriptionEs": [
-        "En el reto anterior, se utilizó el código <code>myName var = \"su nombre\"</code>. Esto es lo que llamamos un variable tipo <code>cadena</code>. No es nada más que un \"cadena\" de caracteres. Las cadenas en JavaScript siempre se encierran entre comillas. ",
+        "En el reto anterior, se utilizó el código <code>myName var = \"su nombre\"</code>. Esto es lo que llamamos una variable tipo <code>cadena</code>. No es nada más que una \"cadena\" de caracteres. Las cadenas en JavaScript siempre se encierran entre comillas. ",
         "Ahora vamos a crear dos nuevas variables tipo cadena: <code>myFirstName</code> y <code>myLastName</code> y asignarles los valores de tu nombre y tu apellido, respectivamente."
       ]
     },
@@ -137,7 +137,7 @@
         "Use the <code>.length</code> property to count the number of characters in the <code>lastName</code> variable."
       ],
       "tests": [
-        "assert((function(){if(typeof(lastNameLength) !== \"undefined\" && typeof(lastNameLength) === \"number\" && lastNameLength === 8){return true;}else{return false;}})(), 'message: <code>lastNameLength</code> should be equal to eight.');",
+        "assert((function(){if(typeof lastNameLength !== \"undefined\" && typeof lastNameLength === \"number\" && lastNameLength === 8){return true;}else{return false;}})(), 'message: <code>lastNameLength</code> should be equal to eight.');",
         "assert((function(){if(editor.getValue().match(/\\.length/gi) && editor.getValue().match(/\\.length/gi).length >= 2 && editor.getValue().match(/var lastNameLength \\= 0;/gi) && editor.getValue().match(/var lastNameLength \\= 0;/gi).length >= 1){return true;}else{return false;}})(), 'message: You should be getting the length of <code>lastName</code> by using <code>.length</code> like this: <code>lastName.length</code>.');"
       ],
       "challengeSeed": [
@@ -157,7 +157,7 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(lastNameLength) !== \"undefined\"){(function(){return lastNameLength;})();}"
+        "if(typeof lastNameLength !== \"undefined\"){(function(){return lastNameLength;})();}"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -179,7 +179,7 @@
         "Try looking at the <code>firstLetterOfFirstName</code> variable declaration if you get stuck."
       ],
       "tests": [
-        "assert((function(){if(typeof(firstLetterOfLastName) !== \"undefined\" && editor.getValue().match(/\\[0\\]/gi) && typeof(firstLetterOfLastName) === \"string\" && firstLetterOfLastName === \"L\"){return true;}else{return false;}})(), 'message: The <code>firstLetterOfLastName</code> variable should have the value of <code>L</code>.');"
+        "assert((function(){if(typeof firstLetterOfLastName !== \"undefined\" && editor.getValue().match(/\\[0\\]/gi) && typeof firstLetterOfLastName === \"string\" && firstLetterOfLastName === \"L\"){return true;}else{return false;}})(), 'message: The <code>firstLetterOfLastName</code> variable should have the value of <code>L</code>.');"
       ],
       "challengeSeed": [
         "var firstLetterOfFirstName = \"\";",
@@ -200,12 +200,12 @@
       ],
       "type": "waypoint",
       "challengeType": 1,
-      "nameEs": "Usa la notación de corchetes para encontrar el primer carácter de una cadena",
+      "nameEs": "Usa la notación de corchetes para encontrar el primer acaracter de una cadena",
       "descriptionEs": [
-        "La <code>notación de corchetes</code> es una forma de obtener el carácter en un <code>índice</code> específico de una cadena.",
+        "La <code>notación de corchetes</code> es una forma de obtener el caracter en un <code>índice</code> específico de una cadena.",
         "Los computadoras no empiezan a contar desde 1 como hacen los humanos. Comienzan en 0 ",
-        "Por ejemplo, el carácter en el índice 0 en la palabra \"Charles \" es \"C\". Entonces si <code>var firstName = \"Charles\"</code>, puedes obtener la primera letra de la cadena usando <code>firstName[0]</code> .",
-        "Usa la <code>notación de corchetes</code> para encontrar el primer carácter en la variable <code>lastName</code> y asignarlo a <code>firstLetterOfLastName</code>.",
+        "Por ejemplo, el caracter en el índice 0 en la palabra \"Charles \" es \"C\". Entonces si <code>var firstName = \"Charles\"</code>, puedes obtener la primera letra de la cadena usando <code>firstName[0]</code> .",
+        "Usa la <code>notación de corchetes</code> para encontrar el primer caracter en la variable <code>lastName</code> y asignarlo a <code>firstLetterOfLastName</code>.",
         "Si te atascas intenta mirar la declaración de la variable <code>firstLetterOfFirstName</code>."
       ]
     },
@@ -239,8 +239,8 @@
       "challengeType": 1,
       "nameEs": "Usa la notación de corchetes para encontrar el n-ésimo caracter en una cadena",
       "descriptionEs": [
-        "También puede usar <code>notación de corchetes</code> para obtener el carácter en otras posiciones dentro de una cadena.",
-        "Recuerda que los computadores empiezan a contar a 0, por lo que el primer carácter es en realidad el carácter cero.",
+        "También puede usar <code>notación de corchetes</code> para obtener el caracter en otras posiciones dentro de una cadena.",
+        "Recuerda que los computadores empiezan a contar a 0, por lo que el primer caracter es en realidad el caracter cero.",
         "Vamos a tratar de asignar a <code>thirdLetterOfLastName</code> la <code>tercera letra</code> de la variable <code>lastName</code>.",
         "Si te atascas intenta mirar la declaración de la variable <code>secondLetterOfFirstName</code>."
       ]
@@ -274,11 +274,11 @@
       ],
       "type": "waypoint",
       "challengeType": 1,
-      "nameEs": "Usa notación de corchetes para encontrar el último carácter de una cadena",
+      "nameEs": "Usa notación de corchetes para encontrar el último caracter de una cadena",
       "descriptionEs": [
         "Con el fin de conseguir la última letra de una cadena, puedes restar uno a la longitud de la cadena.",
         "Por ejemplo, si <code>var firstName = \"Charles\"</code>, se puede obtener la última letra usando <code>firstName[firstName.length - 1]</code>. ",
-        "Utiliza <code>notación de corchetes</code> para encontrar el último carácter de la variabel <code>lastName</code>.",
+        "Utiliza <code>notación de corchetes</code> para encontrar el último caracter de la variabel <code>lastName</code>.",
         "Si te atascas intenta mirando la declaración de la variable <code>lastLetterOfFirstName</code>."
       ]
     },
@@ -313,9 +313,9 @@
       "challengeType": 1,
       "nameEs": "Usa notación de corchetes para encontrar el n-ésimo último caracter de una cadena",
       "descriptionEs": [
-        "Puede utilizar el mismo principio utilizamos para recuperar el último carácter de una cadena para recuperar el n-ésimo último caracter.",
+        "Puede utilizar el mismo principio utilizamos para recuperar el último caracter de una cadena para recuperar el n-ésimo último caracter.",
         "Por ejemplo, se puede obtener el valor de la tercera última letra de la cadena <code>var firstName = \"Charles\"</code> utilizando <code>firstName[firstName.length - 3]</code> ",
-        "Usa <code>notación de corchete</code> para encontrar el segundo último carácter de la cadena en <code>lastName</code>.",
+        "Usa <code>notación de corchete</code> para encontrar el segundo último caracter de la cadena en <code>lastName</code>.",
         "Si te atascas intenta mirando la declaración de la variable <code>thirdToLastLetterOfFirstName</code>."
       ]
     },
@@ -435,7 +435,7 @@
         "Let's create a variable <code>myDecimal</code> and give it a decimal value."
       ],
       "tests": [
-        "assert((function(){if(typeof(myDecimal) !== \"undefined\" && typeof(myDecimal) === \"number\" && editor.getValue().match(/\\./g).length >=2){return true;}else{return false;}})(), 'message: <code>myDecimal</code> should be a decimal point number.');"
+        "assert((function(){if(typeof myDecimal !== \"undefined\" && typeof myDecimal === \"number\" && editor.getValue().match(/\\./g).length >=2){return true;}else{return false;}})(), 'message: <code>myDecimal</code> should be a decimal point number.');"
       ],
       "challengeSeed": [
         "var ourDecimal = 5.7;",
@@ -443,7 +443,7 @@
         "",
         "// Only change code above this line.",
         "",
-        "(function(){if(typeof(myDecimal) !== \"undefined\"){return myDecimal;}})();"
+        "(function(){if(typeof myDecimal !== \"undefined\"){return myDecimal;}})();"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -517,9 +517,9 @@
         "Refer to the commented code in the text editor if you get stuck."
       ],
       "tests": [
-        "assert(typeof(myArray) == 'object', 'message: <code>myArray</code> should be an <code>array</code>.');",
-        "assert(typeof(myArray[0]) !== 'undefined' && typeof(myArray[0]) == 'string', 'message: The first item in <code>myArray</code> should be a <code>string</code>.');",
-        "assert(typeof(myArray[1]) !== 'undefined' && typeof(myArray[1]) == 'number', 'message: The second item in <code>myArray</code> should be a <code>number</code>.');"
+        "assert(typeof myArray == 'object', 'message: <code>myArray</code> should be an <code>array</code>.');",
+        "assert(typeof myArray[0] !== 'undefined' && typeof myArray[0] == 'string', 'message: The first item in <code>myArray</code> should be a <code>string</code>.');",
+        "assert(typeof myArray[1] !== 'undefined' && typeof myArray[1] == 'number', 'message: The second item in <code>myArray</code> should be a <code>number</code>.');"
       ],
       "challengeSeed": [
         "var array = [\"John\", 23];",
@@ -561,13 +561,13 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}"
+        "if(typeof myArray !== \"undefined\"){(function(){return myArray;})();}"
       ],
       "type": "waypoint",
       "challengeType": 1,
       "nameEs": "Anida un vector dentro de otro vector",
       "descriptionEs": [
-        "También puede anidar vectores dentro de otros vectores, como este: <code>[[\"Bulls\", 23]]</code>.",
+        "También puedes anidar vectores dentro de otros vectores, como este: <code>[[\"Bulls\", 23]]</code>.",
         "Ahora vamos a crear un vector anidado llamado <code>myArray</code>."
       ]
     },
@@ -584,7 +584,7 @@
         "Create a variable called <code>myData</code> and set it to equal the first value of <code>myArray</code>."
       ],
       "tests": [
-        "assert((function(){if(typeof(myArray) != 'undefined' && typeof(myData) != 'undefined' && myArray[0] == myData){return true;}else{return false;}})(), 'message: The variable <code>myData</code> should equal the first value of <code>myArray</code>.');"
+        "assert((function(){if(typeof myArray != 'undefined' && typeof myData != 'undefined' && myArray[0] == myData){return true;}else{return false;}})(), 'message: The variable <code>myData</code> should equal the first value of <code>myArray</code>.');"
       ],
       "challengeSeed": [
         "var ourArray = [1,2,3];",
@@ -598,14 +598,14 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(myArray) !== \"undefined\" && typeof(myData) !== \"undefined\"){(function(y,z){return 'myArray = ' + JSON.stringify(y) + ', myData = ' + JSON.stringify(z);})(myArray, myData);}"
+        "if(typeof myArray !== \"undefined\" && typeof myData !== \"undefined\"){(function(y,z){return 'myArray = ' + JSON.stringify(y) + ', myData = ' + JSON.stringify(z);})(myArray, myData);}"
       ],
       "type": "waypoint",
       "challengeType": 1,
       "nameEs": "Accede a los datos de un vector mediante índices",
       "descriptionEs": [
         "Podemos acceder a los datos dentro de los vectores usando <code>índices</code>.",
-        "Los Índices del vector se escriben en la misma notación con corchetes usado con cadenas, excepto que en lugar de especificar un caracter, especifican un elemento del vector.",
+        "Los índices del vector se escriben en la misma notación con corchetes usado con cadenas, excepto que en lugar de especificar un caracter, especifican un elemento del vector.",
         "Por ejemplo:",
         "<code>var array = [1,2,3];</code>",
         "<code>array[0]; //es igual a 1</code>",
@@ -624,7 +624,7 @@
         "Now modify the data stored at index 0 of <code>myArray</code> to the value of 3."
       ],
       "tests": [
-        "assert((function(){if(typeof(myArray) != 'undefined' && myArray[0] == 3 && myArray[1] == 2 && myArray[2] == 3){return true;}else{return false;}})(), 'message: <code>myArray</code> should now be [3,2,3].');",
+        "assert((function(){if(typeof myArray != 'undefined' && myArray[0] == 3 && myArray[1] == 2 && myArray[2] == 3){return true;}else{return false;}})(), 'message: <code>myArray</code> should now be [3,2,3].');",
         "assert((function(){if(editor.getValue().match(/myArray\\[0\\]\\s?=\\s?/g)){return true;}else{return false;}})(), 'message: You should be using correct index to modify the value in <code>myArray</code>.');"
       ],
       "challengeSeed": [
@@ -640,7 +640,7 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}"
+        "if(typeof myArray !== \"undefined\"){(function(){return myArray;})();}"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -738,22 +738,20 @@
       ],
       "tests": [
         "assert((function(d){if(d[0] == 23 && d[1][0] == 'dog' && d[1][1] == 3 && d[2] == undefined){return true;}else{return false;}})(myArray), 'message: <code>myArray</code> should now equal <code>[23, [\"dog\", 3]]</code>.');",
-        "assert((function(d){if(d === 'John' && typeof(removedFromMyArray) === 'string'){return true;}else{return false;}})(removedFromMyArray), 'message: <code>removedFromMyArray</code> should contain <code>\"John\"</code>.');"
+        "assert((function(d){if(d === 'John' && typeof removedFromMyArray === 'string'){return true;}else{return false;}})(removedFromMyArray), 'message: <code>removedFromMyArray</code> should contain <code>\"John\"</code>.');"
       ],
       "challengeSeed": [
         "var ourArray = [\"Stimpson\", \"J\", [\"cat\"]];",
         "",
-        "removedFromOurArray = ourArray.shift(); // removedFromOurArray now equals \"Stimpson\" and ourArray now equals [\"J\", [\"cat\"]].",
+        "var removedFromOurArray = ourArray.shift(); // removedFromOurArray now equals \"Stimpson\" and ourArray now equals [\"J\", [\"cat\"]].",
         "",
         "var myArray = [\"John\", 23, [\"dog\", 3]];",
         "",
         "// Only change code below this line.",
         "",
-        "var removedFromMyArray;",
-        "",
-        "// Only change code above this line.",
-        "",
-        "",
+        "var removedFromMyArray;"
+      ],
+      "tail":[
         "(function(y, z){return 'myArray = ' + JSON.stringify(y) + ' & removedFromMyArray = ' + JSON.stringify(z);})(myArray, removedFromMyArray);"
       ],
       "type": "waypoint",
@@ -774,7 +772,7 @@
         "Add <code>\"Paul\"</code> onto the beginning of the <code>myArray</code> variable using <code>unshift()</code>."
       ],
       "tests": [
-        "assert((function(d){if(typeof(d[0]) === \"string\" && d[0].toLowerCase() == 'paul' && d[1] == 23 && d[2][0] != undefined && d[2][0] == 'dog' && d[2][1] != undefined && d[2][1] == 3){return true;}else{return false;}})(myArray), 'message: <code>myArray</code> should now have [\"Paul\", 23, [\"dog\", 3]]).');"
+        "assert((function(d){if(typeof d[0] === \"string\" && d[0].toLowerCase() == 'paul' && d[1] == 23 && d[2][0] != undefined && d[2][0] == 'dog' && d[2][1] != undefined && d[2][1] == 3){return true;}else{return false;}})(myArray), 'message: <code>myArray</code> should now have [\"Paul\", 23, [\"dog\", 3]]).');"
       ],
       "challengeSeed": [
         "var ourArray = [\"Stimpson\", \"J\", [\"cat\"]];",
@@ -819,7 +817,7 @@
         "Create and call a function called <code>myFunction</code> that returns the sum of <code>a</code> and <code>b</code>."
       ],
       "tests": [
-        "assert((function(){if(typeof(f) !== \"undefined\" && f === a + b){return true;}else{return false;}})(), 'message: Your function should return the value of <code>a + b</code>.');"
+        "assert((function(){if(typeof f !== \"undefined\" && f === a + b){return true;}else{return false;}})(), 'message: Your function should return the value of <code>a + b</code>.');"
       ],
       "challengeSeed": [
         "var a = 4;",
@@ -836,7 +834,7 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(myFunction) !== \"undefined\"){",
+        "if(typeof myFunction !== \"undefined\"){",
         "var f=myFunction(a,b);",
         "(function(){return f;})();",
         "}"
@@ -875,9 +873,9 @@
         "You can set these object properties to whatever values you want, as long <code>\"name\"</code> is a string, <code>\"legs\"</code> and <code>\"tails\"</code> are numbers, and <code>\"friends\"</code> is an array."
       ],
       "tests": [
-        "assert((function(z){if(z.hasOwnProperty(\"name\") && z.name !== undefined && typeof(z.name) === \"string\"){return true;}else{return false;}})(myDog), 'message: <code>myDog</code> should contain the property <code>name</code> and it should be a <code>string</code>.');",
-        "assert((function(z){if(z.hasOwnProperty(\"legs\") && z.legs !== undefined && typeof(z.legs) === \"number\"){return true;}else{return false;}})(myDog), 'message: <code>myDog</code> should contain the property <code>legs</code> and it should be a <code>number</code>.');",
-        "assert((function(z){if(z.hasOwnProperty(\"tails\") && z.tails !== undefined && typeof(z.tails) === \"number\"){return true;}else{return false;}})(myDog), 'message: <code>myDog</code> should contain the property <code>tails</code> and it should be a <code>number</code>.');",
+        "assert((function(z){if(z.hasOwnProperty(\"name\") && z.name !== undefined && typeof z.name === \"string\"){return true;}else{return false;}})(myDog), 'message: <code>myDog</code> should contain the property <code>name</code> and it should be a <code>string</code>.');",
+        "assert((function(z){if(z.hasOwnProperty(\"legs\") && z.legs !== undefined && typeof z.legs === \"number\"){return true;}else{return false;}})(myDog), 'message: <code>myDog</code> should contain the property <code>legs</code> and it should be a <code>number</code>.');",
+        "assert((function(z){if(z.hasOwnProperty(\"tails\") && z.tails !== undefined && typeof z.tails === \"number\"){return true;}else{return false;}})(myDog), 'message: <code>myDog</code> should contain the property <code>tails</code> and it should be a <code>number</code>.');",
         "assert((function(z){if(z.hasOwnProperty(\"friends\") && z.friends !== undefined && Array.isArray(z.friends)){return true;}else{return false;}})(myDog), 'message: <code>myDog</code> should contain the property <code>friends</code> and it should be an <code>array</code>.');"
       ],
       "challengeSeed": [
@@ -1116,7 +1114,7 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}",
+        "if(typeof myArray !== \"undefined\"){(function(){return myArray;})();}",
         ""
       ],
       "type": "waypoint",
@@ -1172,7 +1170,7 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}",
+        "if(typeof myArray !== \"undefined\"){(function(){return myArray;})();}",
         ""
       ],
       "type": "waypoint",
@@ -1224,7 +1222,7 @@
         ""
       ],
       "tail": [
-        "if(typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}"
+        "if(typeof myArray !== \"undefined\"){(function(){return myArray;})();}"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -1250,7 +1248,7 @@
         "Another type of JavaScript loop is called a \"while loop\", because it runs \"while\" something is true and stops once that something is no longer true.",
         "<code>var ourArray = [];</code>",
         "<code>var i = 0;</code>",
-        "<code>while(i < 5) {</code>",
+        "<code>while (i < 5) {</code>",
         "<code>&nbsp;&nbsp;ourArray.push(i);</code>",
         "<code>&nbsp;&nbsp;i++;</code>",
         "<code>}</code>",
@@ -1270,7 +1268,7 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}",
+        "if(typeof myArray !== \"undefined\"){(function(){return myArray;})();}",
         ""
       ],
       "type": "waypoint",
@@ -1299,7 +1297,7 @@
         "Note that you can return a function, just like you would return a variable or value."
       ],
       "tests": [
-        "assert(typeof(myFunction()) === \"number\", 'message: <code>myFunction</code> should return a random number.');",
+        "assert(typeof myFunction() === \"number\", 'message: <code>myFunction</code> should return a random number.');",
         "assert((myFunction()+''). match(/\\./g), 'message: The number returned by <code>myFunction</code> should be a decimal.');",
         "assert(editor.getValue().match(/Math\\.random/g).length >= 0, 'message: You should be using <code>Math.random</code> to generate the random decimal number.');"
       ],
@@ -1320,7 +1318,7 @@
       "nameEs": "Generar fracciones al azar con JavaScript",
       "descriptionEs": [
         "Los números aleatorios son útiles para crear un comportamiento aleatorio.",
-        "JavaScript tiene una función <code>Math.random ()</code> que genera un número decimal aleatorio.",
+        "JavaScript tiene una función <code>Math.random()</code> que genera un número decimal aleatorio.",
         "Cambia <code>myFunction</code> para que devuelva un número al azar en lugar de devolver <code>0</code>.",
         "Ten en cuenta que puedes retornar lo retornado por una función, igual que harías para devolver una variable o valor."
       ]
@@ -1342,7 +1340,7 @@
       ],
       "tests": [
         "assert(editor.getValue().match(/var\\srandomNumberBetween0and19\\s=\\sMath.floor\\(Math.random\\(\\)\\s\\*\\s20\\);/).length == 1, 'message: The first line of code should not be changed.');",
-        "assert(typeof(myFunction()) === \"number\" && (function(){var r = myFunction();return Math.floor(r) === r;})(), 'message: The result of <code>myFunction</code> should be a whole number.');",
+        "assert(typeof myFunction() === \"number\" && (function(){var r = myFunction();return Math.floor(r) === r;})(), 'message: The result of <code>myFunction</code> should be a whole number.');",
         "assert(editor.getValue().match(/Math.random/g).length > 1, 'message: You should be using <code>Math.random</code> to generate a random number.');",
         "assert(editor.getValue().match(/\\(\\s*?Math.random\\s*?\\(\\s*?\\)\\s*?\\*\\s*?10\\s*?\\)/g) || editor.getValue().match(/\\(\\s*?10\\s*?\\*\\s*?Math.random\\s*?\\(\\s*?\\)\\s*?\\)/g), 'message: You should have multiplied the result of <code>Math.random</code> by 10 to make it a number that is between zero and nine.');",
         "assert(editor.getValue().match(/Math.floor/g).length > 1, 'message: You should use <code>Math.floor</code> to remove the decimal part of the number.');"
@@ -1374,7 +1372,7 @@
         "Tenga en cuenta que debido a que estamos redondeando, es imposible obtener 20.",
         "Poniendo todo junto, así es como se ve nuestro código:",
         "<code>Math.floor(Math.random() * 20);</code>",
-        "¿Ves como <code>Math.floor</code> toma <code>(Math.random () * 20)</code> como su argumento? Así es - puedes pasar el resultado de un función como argumento de otra función.",
+        "¿Ves como <code>Math.floor</code> toma <code>(Math.random() * 20)</code> como su argumento? Así es - puedes pasar el resultado de un función como argumento de otra función.",
         "usemos esta técnica para generar y devolver un número entero aleatorio entre 0 y 9."
       ]
     },
@@ -1470,7 +1468,7 @@
         "",
         "}",
         "",
-        "var result = myFunction();if(typeof(flip) !== \"undefined\" && typeof(flip) === \"number\" && typeof(result) !== \"undefined\" && typeof(result) === \"string\"){(function(y,z){return 'flip = ' + y.toString() + ', text = ' + z;})(flip, result);}"
+        "var result = myFunction();if(typeof flip !== \"undefined\" && typeof flip === \"number\" && typeof result !== \"undefined\" && typeof result === \"string\"){(function(y,z){return 'flip = ' + y.toString() + ', text = ' + z;})(flip, result);}"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -1503,11 +1501,11 @@
         "We can do this by replacing the <code>.</code> part of our regular expression with the word <code>and</code>."
       ],
       "tests": [
-        "assert(test==2, 'message: Your <code>regular expression</code> should find two occurrences of the word <code>and</code>.');",
+        "assert(myTest==2, 'message: Your <code>regular expression</code> should find two occurrences of the word <code>and</code>.');",
         "assert(editor.getValue().match(/\\/and\\/gi/), 'message: Use <code>regular expressions</code> to find the word <code>and</code> in <code>testString</code>.');"
       ],
       "challengeSeed": [
-        "var test = (function() {",
+        "var myTest = (function() {",
         "  var testString = \"Ada Lovelace and Charles Babbage designed the first computer and the software that would have run on it.\";",
         "  var expressionToGetSoftware = /software/gi;",
         "",
@@ -1518,7 +1516,7 @@
         "  // Only change code above this line.",
         "",
         "  return testString.match(expression).length;",
-        "})();(function(){return test;})();"
+        "})();(function(){return myTest;})();"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -1547,10 +1545,10 @@
       ],
       "tests": [
         "assert(editor.getValue().match(/\\/\\\\d\\+\\//g), 'message: Use the <code>/\\d+/g</code> regular expression to find the numbers in <code>testString</code>.');",
-        "assert(test === 2, 'message: Your regular expression should find two numbers in <code>testString</code>.');"
+        "assert(myTest === 2, 'message: Your regular expression should find two numbers in <code>testString</code>.');"
       ],
       "challengeSeed": [
-        "var test = (function() {",
+        "var myTest = (function() {",
         "",
         "  var testString = \"There are 3 cats but 4 dogs.\";",
         "",
@@ -1562,7 +1560,7 @@
         "",
         "  return testString.match(expression).length;",
         "",
-        "})();(function(){return test;})();"
+        "})();(function(){return myTest;})();"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -1587,10 +1585,10 @@
       ],
       "tests": [
         "assert(editor.getValue().match(/\\/\\\\s\\+\\//g), 'message: Use the <code>/\\s+/g</code> regular expression to find the spaces in <code>testString</code>.');",
-        "assert(test === 7, 'message: Your regular expression should find seven spaces in <code>testString</code>.');"
+        "assert(myTest === 7, 'message: Your regular expression should find seven spaces in <code>testString</code>.');"
       ],
       "challengeSeed": [
-        "var test = (function(){",
+        "var myTest = (function(){",
         "  var testString = \"How many spaces are there in this sentence?\";",
         "",
         "  // Only change code below this line.",
@@ -1601,7 +1599,7 @@
         "",
         "  return testString.match(expression).length;",
         "",
-        "})();(function(){return test;})();"
+        "})();(function(){return myTest;})();"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -1624,10 +1622,10 @@
       ],
       "tests": [
         "assert(editor.getValue().match(/\\/\\\\S\\/g/g), 'message: Use the <code>/\\S/g</code> regular expression to find non-space characters in <code>testString</code>.');",
-        "assert(test === 49, 'message: Your regular expression should find forty nine non-space characters in the <code>testString</code>.');"
+        "assert(myTest === 49, 'message: Your regular expression should find forty nine non-space characters in the <code>testString</code>.');"
       ],
       "challengeSeed": [
-        "var test = (function(){",
+        "var myTest = (function(){",
         "  var testString = \"How many non-space characters are there in this sentence?\";",
         "",
         "  // Only change code below this line.",
@@ -1637,7 +1635,7 @@
         "  // Only change code above this line.",
         "",
         "  return testString.match(expression).length;",
-        "})();(function(){return test;})();"
+        "})();(function(){return myTest;})();"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -1660,10 +1658,10 @@
         "<code>Math.floor(Math.random() * (3 - 1 + 1)) + 1;</code>"
       ],
       "tests": [
-        "assert(typeof(runSlots($(\".slot\"))[0]) === \"number\" && runSlots($(\".slot\"))[0] > 0 && runSlots($(\".slot\"))[0] < 4, '<code>slotOne</code> should be a random number.')",
-        "assert(typeof(runSlots($(\".slot\"))[1]) === \"number\" && runSlots($(\".slot\"))[1] > 0 && runSlots($(\".slot\"))[1] < 4, '<code>slotTwo</code> should be a random number.')",
-        "assert(typeof(runSlots($(\".slot\"))[2]) === \"number\" && runSlots($(\".slot\"))[2] > 0 && runSlots($(\".slot\"))[2] < 4, '<code>slotThree</code> should be a random number.')",
-        "assert((function(){if(editor.match(/Math\\.floor\\(\\s?Math\\.random\\(\\)\\s?\\*\\s?\\(\\s?3\\s?\\-\\s?1\\s?\\+\\s?1\\s?\\)\\s?\\)\\s?\\+\\s?1/gi) !== null){return editor.match(/slot.*?=.*?\\(.*?\\).*?/gi).length >= 3;}else{return false;}})(), 'You should have used <code>Math.floor(Math.random() * (3 - 1 + 1)) + 1;</code> three times to generate your random numbers.')"
+        "assert(typeof runSlots($(\".slot\"))[0] === \"number\" && runSlots($(\".slot\"))[0] > 0 && runSlots($(\".slot\"))[0] < 4, 'message: <code>slotOne</code> should be a random number.');",
+        "assert(typeof runSlots($(\".slot\"))[1] === \"number\" && runSlots($(\".slot\"))[1] > 0 && runSlots($(\".slot\"))[1] < 4, 'message: <code>slotTwo</code> should be a random number.');",
+        "assert(typeof runSlots($(\".slot\"))[2] === \"number\" && runSlots($(\".slot\"))[2] > 0 && runSlots($(\".slot\"))[2] < 4, 'message: <code>slotThree</code> should be a random number.');",
+        "assert((function(){if(code.match(/Math\\.floor\\(\\s?Math\\.random\\(\\)\\s?\\*\\s?\\(\\s?3\\s?\\-\\s?1\\s?\\+\\s?1\\s?\\)\\s?\\)\\s?\\+\\s?1/gi) !== null){return code.match(/slot.*?=.*?\\(.*?\\).*?/gi).length >= 3;}else{return false;}})(), 'message: You should have used <code>Math.floor(Math.random() * (3 - 1 + 1)) + 1;</code> three times to generate your random numbers.');"
       ],
       "challengeSeed": [
         "fccss",
@@ -1827,7 +1825,7 @@
         "If all three numbers match, we should also set the text <code>\"It's A Win\"</code> to the element with class <code>logger</code>."
       ],
       "tests": [
-        "assert((function(){var data = runSlots();return data === null || data.toString().length === 1;})(), 'If all three of our random numbers are the same we should return that number. Otherwise we should return <code>null</code>.')"
+        "assert((function(){var data = runSlots();return data === null || data.toString().length === 1;})(), 'message: If all three of our random numbers are the same we should return that number. Otherwise we should return <code>null</code>.');"
       ],
       "challengeSeed": [
         "fccss",
@@ -1996,8 +1994,8 @@
         "Use the above selector to display each number in its corresponding slot."
       ],
       "tests": [
-        "assert((function(){runSlots();if($($(\".slot\")[0]).html().replace(/\\s/gi, \"\") !== \"\" && $($(\".slot\")[1]).html().replace(/\\s/gi, \"\") !== \"\" && $($(\".slot\")[2]).html().replace(/\\s/gi, \"\") !== \"\"){return true;}else{return false;}})(), 'You should be displaying the result of the slot numbers in the corresponding slots.')",
-        "assert((editor.match( /\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[\\d\\]\\s*?\\)/gi) && editor.match( /\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[\\d\\]\\s*?\\)/gi ).length >= 3 && editor.match( /\\.html\\(slotOne\\)/gi ) && editor.match( /\\.html\\(slotTwo\\)/gi ) && editor.match( /\\.html\\(slotThree\\)/gi )), 'You should have used the the selector given in the description to select each slot and assign it the value of <code>slotOne</code>&#44; <code>slotTwo</code> and <code>slotThree</code> respectively.')"
+        "assert((function(){runSlots();if($($(\".slot\")[0]).html().replace(/\\s/gi, \"\") !== \"\" && $($(\".slot\")[1]).html().replace(/\\s/gi, \"\") !== \"\" && $($(\".slot\")[2]).html().replace(/\\s/gi, \"\") !== \"\"){return true;}else{return false;}})(), 'message: You should be displaying the result of the slot numbers in the corresponding slots.');",
+        "assert((code.match( /\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[\\d\\]\\s*?\\)/gi) && code.match( /\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[\\d\\]\\s*?\\)/gi ).length >= 3 && code.match( /\\.html\\(slotOne\\)/gi ) && code.match( /\\.html\\(slotTwo\\)/gi ) && code.match( /\\.html\\(slotThree\\)/gi )), 'message: You should have used the the selector given in the description to select each slot and assign it the value of <code>slotOne</code>&#44; <code>slotTwo</code> and <code>slotThree</code> respectively.');"
       ],
       "challengeSeed": [
         "fccss",
@@ -2170,13 +2168,13 @@
         "Set up all three slots like this, then click the \"Go\" button to play the slot machine."
       ],
       "tests": [
-        "assert((editor.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[\\d\\]\\s*?\\)\\.html\\(\\s*?\\'\\<img\\s?src\\s?=\\s?\"\\'\\s?\\+\\s?images\\[\\w+\\s*\\-\\s*1\\]\\s?\\+\\s?\\'\"\\>\\'\\s*?\\);/gi) && editor.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[\\d\\]\\s*?\\)\\.html\\(\\s*?\\'\\<img\\s?src\\s?=\\s?\"\\'\\s?\\+\\s?images\\[\\w+\\s*\\-\\s*1\\]\\s?\\+\\s?\\'\"\\>\\'\\s*?\\);/gi).length >= 3), 'Use the provided code three times. One for each slot.')",
-        "assert(editor.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[0\\]\\s*?\\)/gi), 'You should have used <code>$&#40;&#39;.slot&#39;&#41;[0]</code> at least once.')",
-        "assert(editor.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[1\\]\\s*?\\)/gi), 'You should have used <code>$&#40;&#39;.slot&#39;&#41;[1]</code> at least once.')",
-        "assert(editor.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[2\\]\\s*?\\)/gi), 'You should have used <code>$&#40;&#39;.slot&#39;&#41;[2]</code> at least once.')",
-        "assert(editor.match(/slotOne/gi) && editor.match(/slotOne/gi).length >= 7, 'You should have used the <code>slotOne</code> value at least once.')",
-        "assert(editor.match(/slotTwo/gi) && editor.match(/slotTwo/gi).length >= 8, 'You should have used the <code>slotTwo</code> value at least once.')",
-        "assert(editor.match(/slotThree/gi) && editor.match(/slotThree/gi).length >= 7, 'You should have used the <code>slotThree</code> value at least once.')"
+        "assert((code.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[\\d\\]\\s*?\\)\\.html\\(\\s*?\\'\\<img\\s?src\\s?=\\s?\"\\'\\s?\\+\\s?images\\[\\w+\\s*\\-\\s*1\\]\\s?\\+\\s?\\'\"\\>\\'\\s*?\\);/gi) && code.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[\\d\\]\\s*?\\)\\.html\\(\\s*?\\'\\<img\\s?src\\s?=\\s?\"\\'\\s?\\+\\s?images\\[\\w+\\s*\\-\\s*1\\]\\s?\\+\\s?\\'\"\\>\\'\\s*?\\);/gi).length >= 3), 'message: Use the provided code three times. One for each slot.');",
+        "assert(code.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[0\\]\\s*?\\)/gi), 'message: You should have used <code>$&#40;&#39;.slot&#39;&#41;[0]</code> at least once.');",
+        "assert(code.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[1\\]\\s*?\\)/gi), 'message: You should have used <code>$&#40;&#39;.slot&#39;&#41;[1]</code> at least once.');",
+        "assert(code.match(/\\$\\s*?\\(\\s*?\\$\\s*?\\(\\s*?(?:'|\")\\s*?\\.slot\\s*?(?:'|\")\\s*?\\)\\[2\\]\\s*?\\)/gi), 'message: You should have used <code>$&#40;&#39;.slot&#39;&#41;[2]</code> at least once.');",
+        "assert(code.match(/slotOne/gi) && code.match(/slotOne/gi).length >= 7, 'message: You should have used the <code>slotOne</code> value at least once.');",
+        "assert(code.match(/slotTwo/gi) && code.match(/slotTwo/gi).length >= 8, 'message: You should have used the <code>slotTwo</code> value at least once.');",
+        "assert(code.match(/slotThree/gi) && code.match(/slotThree/gi).length >= 7, 'message: You should have used the <code>slotThree</code> value at least once.');"
       ],
       "challengeSeed": [
         "fccss",

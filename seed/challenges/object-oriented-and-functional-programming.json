@@ -49,10 +49,10 @@
       ],
       "challengeType": 1,
       "type": "waypoint",
-      "nameEs": "Declarar objetos de JavaScript como variables",
+      "nameEs": "Declara objetos de JavaScript como variables",
       "descriptionEs": [
         "Antes de sumergirnos en Programación Orientada a Objetos, vamos a revisar los objetos de JavaScript.",
-        "Dale a tu objeto <code>motorBike</code> un atributo <code>wheels</code>, otro <code>motors</code> y otro <code>seats</code> y asignales números."
+        "Dale a tu objeto <code>motorBike</code> un atributo <code>wheels</code>, otro llamado <code>motors</code> y otro <code>seats</code> y asignales números."
       ]
     },
     {
@@ -74,9 +74,9 @@
         "Have your <code>MotorBike</code> <code>constructor</code> describe an object with <code>wheels</code>, <code>engines</code> and <code>seats</code> properties and set them to numbers."
       ],
       "tests": [
-        "assert(typeof (new MotorBike()).engines === 'number', 'message: <code>myMotorBike</code> should have a <code>engines</code> attribute set to a number.');",
-        "assert(typeof (new MotorBike()).wheels === 'number', 'message: <code>myMotorBike</code> should have a <code>wheels</code> attribute set to a number.');",
-        "assert(typeof (new MotorBike()).seats === 'number', 'message: <code>myMotorBike</code> should have a <code>seats</code> attribute set to a number.');"
+        "assert(typeof (new MotorBike()).engines === 'number', 'message: <code>MotorBike</code> should have a <code>engines</code> attribute set to a number.');",
+        "assert(typeof (new MotorBike()).wheels === 'number', 'message: <code>MotorBike</code> should have a <code>wheels</code> attribute set to a number.');",
+        "assert(typeof (new MotorBike()).seats === 'number', 'message: <code>MotorBike</code> should have a <code>seats</code> attribute set to a number.');"
       ],
       "challengeSeed": [
         "var Car = function() {",
@@ -84,8 +84,6 @@
         "  this.engines = 1;",
         "  this.seats = 1;",
         "};",
-        "",
-        "var myCar = new Car();",
         "",
         "// Only change code below this line.",
         "",
@@ -96,8 +94,7 @@
         "};"
       ],
       "tail": [
-        "var myMotorBike = new MotorBike();",
-        "(function() {return JSON.stringify(myMotorBike);})();"
+        "(function() {return JSON.stringify(new MotorBike());})();"
       ],
       "solutions": [
         "var Car = function() {\n  this.wheels = 4;\n  this.engines = 1;\n  this.seats = 1;\n};\n\nvar myCar = new Car();\n\nvar MotorBike = function() {\n  this.engines = 1;\n  this.seats = 1;\n  this.wheels = 4;\n};\n\nvar myMotorBike = new MotorBike();"
@@ -107,7 +104,7 @@
       "nameEs": "Construye objetos de JavaScript con funciones",
       "descriptionEs": [
         "También podemos crear objetos utilizando funciones <code>constructoras</code>.",
-        "A cada función <code>constructora</code>se le da un nombre comenzando en mayúsculas para que quede claro que es una <code>constructora </code>.",
+        "A cada función <code>constructora</code>se le da un nombre comenzando en mayúsculas para que quede claro que es una <code>constructora</code>.",
         "He aquí un ejemplo de una función <code>constructora</code>:",
         "<code>var Carro = function() {</code>",
         "<code>& nbsp; & nbsp; this.llantas = 4; </code>",
@@ -166,7 +163,7 @@
       ],
       "challengeType": 1,
       "type": "waypoint",
-      "nameEs": "Haz instancias de objetos con funciones constructoras",
+      "nameEs": "Crea instancias de objetos con funciones constructoras",
       "descriptionEs": [
         "¡Ahora usemos esa gran <code>constructora</code> que hicimos en la última lección!",
         "Para utilizar una función <code>constructora</code> la llamamos con la palabra reservada <code>new</code> al frente, como:",
@@ -231,7 +228,7 @@
       ],
       "challengeType": 1,
       "type": "waypoint",
-      "nameEs": "Haz objetos únicos pasando parámetros a la constructora",
+      "nameEs": "Crea objetos únicos pasando parámetros a la constructora",
       "descriptionEs": [
         "La <code>constructora</code> que tenemos es fabulosa, pero ¿qué hacer si no queremos crear siempre el mismo objeto?",
         "Para solucionar esto podemos añadir<code>parámetros</code>en nuestra <code>constructora</code>. Hacemos esto como en el siguiente ejemplo: ",
@@ -249,7 +246,7 @@
         "<code>&nbsp;&nbsp;motores: 1</code>",
         "<code>}</code>",
         "¡Ahora date una oportunidad a ti mismo! Modifica la <code>constructora</code> <code>Car</code> para que use <code>parámetros</code> que permitan asignar valores para las propiedades <code>wheels</code>, <code>seats</code>, y <code>engines</code>. ",
-        "Entonces llama a tu nueva <code>onstructora</code> con tres <code>argumentos</code> numéricos y asígnala a <code>myCar</code>para verla en acción."
+        "Entonces llama a tu nueva <code>constructora</code> con tres <code>argumentos</code> numéricos y asígnala a <code>myCar</code>para verla en acción."
       ]
     },
     {
@@ -266,8 +263,8 @@
         "Now try it yourself! Modify the <code>Bike</code> <code>constructor</code> to have a <code>private property</code> called <code>gear</code> and two <code>public methods</code> called <code>getGear</code> and <code>setGear</code> to get and set that value."
       ],
       "tests": [
-        "assert(typeof myBike.getGear !== 'undefined' && typeof(myBike.getGear) === 'function', 'message: The method <code>getGear</code> of <code>myBike</code> should be accessible outside the object.');",
-        "assert(typeof myBike.setGear !== 'undefined' && typeof(myBike.setGear) === 'function', 'message: The method <code>setGear</code> of <code>myBike</code> should be accessible outside the object.');",
+        "assert(typeof myBike.getGear !== 'undefined' && typeof myBike.getGear === 'function', 'message: The method <code>getGear</code> of <code>myBike</code> should be accessible outside the object.');",
+        "assert(typeof myBike.setGear !== 'undefined' && typeof myBike.setGear === 'function', 'message: The method <code>setGear</code> of <code>myBike</code> should be accessible outside the object.');",
         "assert(typeof myBike.gear === 'undefined', 'message: <code>myBike.gear</code> should remain undefined.');"
       ],
       "challengeSeed": [
@@ -319,7 +316,7 @@
         "Esto es útil cuando necesitamos almacenar información sobre un objeto, pero controlando como se usa en el código externo al objeto.",
         "Por ejemplo, ¿qué pasa si queremos almacenar la <code>velocidad</code> con la cual se desplaza nuestro carro, pero queremos que el código externo pueda modificarla sólo acelerando o desacelerando, de forma que la velocidad cambie de una manera controlada?",
         "En el editor se puede ver un ejemplo de una <code>constructora</code> de <code>Car</code> que implementa este patrón.",
-        "Ahora pruébalo tú mismo! Modifica la <code>constructora</code> <code>Bike</code> para tener una <code>propiedad privada</code> llamada <code>gear</code>y dos<code>métodos públicos</code> llamados <code>getGear</code>y<code>setGear</code> para obtener y establecer ese valor."
+        "¡Ahora pruébalo tú mismo! Modifica la <code>constructora</code> <code>Bike</code> para tener una <code>propiedad privada</code> llamada <code>gear</code>y dos<code>métodos públicos</code> llamados <code>getGear</code>y<code>setGear</code> para obtener y establecer ese valor."
       ]
     },
     {
@@ -398,8 +395,8 @@
       "nameEs": "Condensa vectores con .reduce",
       "descriptionEs": [
         "El método <code>reduce</code> de un vector, se utiliza para iterar a través del vector y condensarlo en un valor.",
-        "Para usar <code>reduce</code> tu le pasas una función de devolución de llamada cuyos argumentos sean un acumulador (en este caso,<code>valorPrevio</code>) y el valor actual (<code>valorActual</code>). ",
-        "<code>reduce</code> tiene un segundo argumento opcional que puede usarse para asignar un valor inicial al acumulador. Si no se especifica ningún valor inicial será el primer elemento del vector y <code>valorActual</code> comenzará en el segundo elemento del vector. ",
+        "Para usar <code>reduce</code> tu le pasas una función de devolución de llamada cuyos argumentos sean un acumulador (en este caso, <code>valorPrevio</code>) y el valor actual (<code>valorActual</code>). ",
+        "<code>reduce</code> tiene un argumento opcional que puede usarse para asignar un valor inicial al acumulador. Si no se especifica ningún valor inicial será el primer elemento del vector y <code>valorActual</code> comenzará en el segundo elemento del vector. ",
         "He aquí un ejemplo de<code>reduce</code> cuando se utiliza para restar todos los valores de una matriz:",
         "<code>var singleVal = array.reduce(function(valorAnterior, valorActual) {</code>",
         "<code>&nbsp;&nbsp;return valorAnterior - valorActual;</code>",
@@ -441,7 +438,7 @@
       "type": "waypoint",
       "nameEs": "Filtrar vectores con .filter",
       "descriptionEs": [
-        "El método <code>.filter</code> se utiliza para iterar a través de un vector y filtrar los elementos que hagan falsa un condición determinada.",
+        "El método <code>filter</code> se utiliza para iterar a través de un vector y filtrar los elementos que hagan falsa un condición determinada.",
         "<code>filter</code> recibe una función de devolución de llamada que a su vez recibe como argumento el valor actual (que hemos llamado que<code>val </code>).",
         "Cualquier elemento del vector para el cual la función de devolución de llamada retorne <code>true</code> se mantendrá y los elementos que devuelven <code>false</code> serán filtrados.",
         "El código siguiente es un ejemplo del uso del <code>filter</code> para eliminar los elementos de un vector que no sean números pares:",
@@ -484,9 +481,9 @@
       ],
       "challengeType": 1,
       "type": "waypoint",
-      "nameEs": "Ordenar vectores con .sort",
+      "nameEs": "Ordena vectores con .sort",
       "descriptionEs": [
-        "Puedes utilizar el método <codesort</code> para ordenar alfabética o numéricamente los valores de un vector.",
+        "Puedes utilizar el método <code>sort</code> para ordenar alfabética o numéricamente los valores de un vector.",
         "A diferencia de los métodos de vector que hemos visto,<code>sort</code>en realidad altera el vector en su lugar. Sin embargo, también devuelve este vector ordenado. ",
         "<code>sort</code> puede recibir como parámetro una función de devolución de llamada para comparar. Sin no se provee una función de comparación, convertirá los valores a cadenas y los ordenará alfabéticamente. ",
         "He aquí un ejemplo del uso de <code>sort</code> con una función de comparación que ordena los elementos de menor a mayor:",
@@ -583,7 +580,7 @@
       ],
       "tests": [
         "assert(/\\.split\\(/gi, 'message: You should use the <code>split</code> method on the string.');",
-        "assert(typeof(array) === 'object' && array.length === 5, 'message: You should split the string by its spaces.');"
+        "assert(typeof array === 'object' && array.length === 5, 'message: You should split the string by its spaces.');"
       ],
       "challengeSeed": [
         "var string = \"Split me into an array\";",
@@ -604,7 +601,7 @@
         "<code>split</code> utiliza el argumento que recibe como delimitador para determinar en qué puntos debe dividir la cadena.",
         "He aquí un ejemplo del uso de <code>split</code> para dividir una cadena en cada caracter <code>s</code>:",
         "<code>var vector = string.split('s');</code>",
-        "Usa <code>split</code> para crear un vector con las palabras de una <code>csdena</code> y asignalo a la variable <code>array</code>."
+        "Usa <code>split</code> para crear un vector con las palabras de una <code>cadena</code> y asígnalo a la variable <code>array</code>."
       ]
     },
     {
@@ -619,7 +616,7 @@
         "Use the <code>join</code> method to create a string from <code>joinMe</code> with spaces in between each element and assign it to <code>joinedString</code>."
       ],
       "tests": [
-        "assert(typeof(joinedString) === 'string' && joinedString === \"Split me into an array\", 'message: You should join the elements of the array with spaces.');",
+        "assert(typeof joinedString === 'string' && joinedString === \"Split me into an array\", 'message: You should join the elements of the array with spaces.');",
         "assert(/\\.join\\(/gi, 'message: You should use of the <code>join</code> method on the array.');"
       ],
       "challengeSeed": [
