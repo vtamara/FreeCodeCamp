@@ -5,7 +5,6 @@
 var path = require('path');
 var fs = require('fs');
 
-if (process.env.NODE_ENV === 'production') {
   exports.privateKey =
     fs.readFileSync(path.join(__dirname,
       '../../private/privatekey.pem'));
@@ -13,4 +12,3 @@ if (process.env.NODE_ENV === 'production') {
     fs.readFileSync(path.join(__dirname,
       '../../private/certificate.pem'));
 
-}
