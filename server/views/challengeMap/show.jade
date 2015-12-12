@@ -132,6 +132,7 @@ block content
                             h3 #{challengeBlock.name} &thinsp;
 
 
+<<<<<<< 51206301eaf6607cd50dae6616de67ffccb58b95
                     - var i = 0
                     for challenge in challengeBlock.challenges
                         - i++
@@ -144,7 +145,7 @@ block content
                                     span.faded.map-p.negative-10
                                         a(href="/challenges/#{challenge.dashedName}")
                                             span.capitalize= challenge.type + ': '
-                                            span= challenge.title
+                                            span= challenge.nameEs
                                                 span.sr-only= " Complete"
 
 
@@ -157,7 +158,7 @@ block content
                                     span.map-p.negative-10
                                         a(href="/challenges/#{challenge.dashedName}")
                                             span.capitalize= challenge.type + ': '
-                                            span= challenge.title
+                                            span= challenge.nameEs
                                                 span.sr-only= " Incomplete"
                                         if challenge.markNew
                                             span.text-danger.small &thinsp; &thinsp;

@@ -285,13 +285,29 @@ module.exports = function(app) {
           return Observable.just(redirectUrl);
         }
 
+        function theName(challenge) {
+          if (typeof challenge.nameEs != 'undefined' && challenge.nameEs != '') {
+            return challenge.nameEs
+          } else {
+            return challenge.name
+          }
+        }
+
+        function theDescription(challenge) {
+          if (typeof challenge.descriptionEs != 'undefined' && challenge.descriptionEs.length > 0) {
+            return challenge.descriptionEs
+          } else {
+            return challenge.description
+          }
+        }
+
         // save user does nothing if user does not exist
         return Observable.just({
 
-          title: challenge.name,
-          name: challenge.name,
-          details: challenge.description,
-          description: challenge.description,
+          title: theName(challenge),
+          name: theName(challenge),
+          details: theDescription(challenge),
+          description: theDescription(challenge),
           challengeId: challenge.id,
           challengeType: challenge.challengeType,
           dashedName: origChallengeName,
