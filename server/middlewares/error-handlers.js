@@ -1,9 +1,9 @@
-import errorHanlder from 'errorhandler';
+import errorHandler from 'errorhandler';
 import accepts from 'accepts';
 
 export default function prodErrorHandler() {
   if (process.env.NODE_ENV === 'development') {
-    return errorHanlder({ log: true });
+    return errorHandler({ log: true });
   }
   // error handling in production.
   // disabling eslint due to express parity rules for error handlers
@@ -19,17 +19,17 @@ export default function prodErrorHandler() {
     }
 
     // parse res type
-    var accept = accepts(req);
-    var type = accept.type('html', 'json', 'text');
+    const accept = accepts(req);
+    const type = accept.type('html', 'json', 'text');
 
-    var message = 'Oops! Something went wrong. Please try again later';
+    const message = 'Oops! Something went wrong. Please try again later';
     if (type === 'html') {
       if (typeof req.flash === 'function') {
-        req.flash('errors', {
-          msg: message
+        req.flash(err.messageType || 'errors', {
+          msg: err.userMessage || message
         });
       }
-      return res.redirect('/');
+      return res.redirect(err.redirectTo || '/map');
       // json
     } else if (type === 'json') {
       res.setHeader('Content-Type', 'application/json');

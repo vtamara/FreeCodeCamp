@@ -18,7 +18,7 @@ if (typeof DEBUG === 'undefined') { DEBUG = true; }
   // the standard loops - note that recursive is not supported
   var re = /\b(for|while|do)\b/g;
   var reSingle = /\b(for|while|do)\b/;
-  var labelRe = /\b([a-z_]{1}\w+:)/i;
+  var labelRe = /\b(?!default:)([a-z_]{1}\w+:)/i;
   var comments = /(?:\/\*(?:[\s\S]*?)\*\/)|(?:([\s;])+\/\/(?:.*)$)/gm;
   var loopTimeout = 1000;
 
@@ -50,13 +50,17 @@ if (typeof DEBUG === 'undefined') { DEBUG = true; }
     var openPos = -1;
 
     do {
-      j -= 1;
       DEBUG && debug('looking backwards ' + lines[j]); // jshint ignore:line
       closePos = lines[j].indexOf('*/');
       openPos = lines[j].indexOf('/*');
 
       if (closePos !== -1) {
         closeCommentTags++;
+      }
+
+      // check for single line /* comment */ formatted comments
+      if (closePos === lines[j].length - 2 && openPos !== -1) {
+        closeCommentTags--;
       }
 
       if (openPos !== -1) {
@@ -67,7 +71,8 @@ if (typeof DEBUG === 'undefined') { DEBUG = true; }
           return true;
         }
       }
-    } while (j !== 0);
+      j -= 1;
+    } while (j >= 0);
 
     return false;
   }
@@ -83,8 +88,8 @@ if (typeof DEBUG === 'undefined') { DEBUG = true; }
       }
       if (character === '/' || character === '*') {
         // looks like a comment, go back one to confirm or not
-        --index;
-        if (character === '/') {
+        var prevCharacter = line.substr(index - 1, 1);
+        if (prevCharacter === '/') {
           // we've found a comment, so let's exit and ignore this line
           DEBUG && debug('- exit: part of a comment'); // jshint ignore:line
           return true;
@@ -125,13 +130,14 @@ if (typeof DEBUG === 'undefined') { DEBUG = true; }
     var ignore = {};
     var pushonly = {};
     var labelPostion = null;
+    var labelIndex = -1;
 
     function insertReset(lineNum, line, matchPosition) {
       // recompile the line with the reset **just** before the actual loop
       // so that we insert in to the correct location (instead of possibly
       // outside the logic
       return line.slice(0, matchPosition) + ';' + method + '({ line: ' + lineNum + ', reset: true }); ' + line.slice(matchPosition);
-    };
+    }
 
     if (!offset) {
       offset = 0;
@@ -174,6 +180,7 @@ if (typeof DEBUG === 'undefined') { DEBUG = true; }
             if (directlyBeforeLoop(index, lineNum, lines)) {
               DEBUG && debug('- found a label: "' + labelMatch[0] + '"'); // jshint ignore:line
               labelPostion = lineNum;
+              labelIndex = index;
             } else {
               DEBUG && debug('- ignored "label", false positive'); // jshint ignore:line
             }
@@ -304,10 +311,11 @@ if (typeof DEBUG === 'undefined') { DEBUG = true; }
                 DEBUG && debug('- reset inserted above matched label on line ' + labelPostion); // jshint ignore:line
                 if (recompiled[labelPostion] === undefined) {
                   labelPostion--;
-                  matchPosition = 0;
+                  labelIndex = 0;
                 }
-                recompiled[labelPostion] = insertReset(printLineNumber, recompiled[labelPostion], matchPosition);
+                recompiled[labelPostion] = insertReset(printLineNumber, recompiled[labelPostion], labelIndex);
                 labelPostion = null;
+                labelIndex = -1;
               }
             }
 
@@ -350,8 +358,10 @@ if (typeof DEBUG === 'undefined') { DEBUG = true; }
                 index++;
 
                 if (index === line.length && lineNum < (lines.length-1)) {
-                  lineNum++;
-                  line = lines[lineNum];
+                  do {
+                    lineNum++;
+                    line = lines[lineNum];
+                  } while (line.length === 0);
                   DEBUG && debug(line); // jshint ignore:line
                   index = 0;
                 }
